@@ -2,7 +2,7 @@
 
 pipeline {
     agent { label 'work-station' }
-    stage{
+    stage {
         stages('Lint Check') {                      // start the stage
             steps {
                 sh "echo installing JSlint"
