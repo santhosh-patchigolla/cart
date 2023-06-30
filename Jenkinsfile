@@ -6,7 +6,7 @@ pipeline {
         stage ('Lint Check') {                      // start the stage
             steps {
                    script {
-                        sample.info()     // this is how we call the function in the groovy
+                        sample.info("CART")     // this is how we call the function in the groovy
                     } 
                     sh "echo installing JSlint"
                     sh "npm i jslint"
