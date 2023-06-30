@@ -10,7 +10,7 @@ pipeline {
                 sh "ls -ltr node_modules/bin/"
                 sh "node_modules/jslint/bin/jslint.js server.js"
             }
-        }
+        }                                                       // end of this stage
     }
 }
 
