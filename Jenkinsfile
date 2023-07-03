@@ -1,24 +1,6 @@
 @Library('roboshop-shared-library') _
 
-pipeline {
-    agent { label 'work-station' }
-    stages {
-        stage ('Lint Check') {                      // start the stage
-            steps {
-                script {
-                    nodejs.lintChecks()
-                }
-            }    
-        }
-        stage('Code Compile') {
-            steps {
-
-                     sh "npm install"
-
-            }
-        }                                               // end of this stage
-    }
-}
+nodejs()      // calling  from the roboshop-shared librar(from vars and call is the default function in the Jenkins)
 
 
             //
