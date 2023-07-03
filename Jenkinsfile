@@ -1,6 +1,6 @@
 @Library('roboshop-shared-library') _
 
-nodejs()      // calling  from the roboshop-shared librar(from vars and call is the default function in the Jenkins)
+nodejs("cart")      // calling  from the roboshop-shared librar(from vars and call is the default function in the Jenkins)
 
 
             //
