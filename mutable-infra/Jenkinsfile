@@ -14,7 +14,8 @@ pipeline {
                     // given script below beacuse its a groovy syntax
                     script { git branch: 'main', url: 'https://github.com/santhosh-patchigolla/cart.git' } 
                     sh "ls -ltr"
-                    sh "pwd"     
+                    sh "pwd"  
+                    sh "cd mutable-infra"   
                     sh "terrafile -f env-${ENV}/Terrafile"
                     sh "terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars"
             }
