@@ -11,6 +11,7 @@ pipeline {
     stages {
         stage('terraform init') {
             steps { 
+                    // below is the groovy script to clone the reppo
                    script { git branch: 'main', url: 'https://github.com/santhosh-patchigolla/cart.git' }
                     sh "ls -ltr"
                     sh "pwd"
