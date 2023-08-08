@@ -12,10 +12,11 @@ pipeline {
         stage('terraform init') {
             steps { 
                     // below is the groovy script to clone the reppo and you need to enclose them with the {}
-                   script { git branch: 'main', url: 'https://github.com/santhosh-patchigolla/cart.git' }
+                    script { git branch: 'main', url: 'https://github.com/santhosh-patchigolla/cart.git' }
                     sh "ls -ltr"
                     sh "pwd"
                     sh "cd ${WORKSPACE}/mutable-infra"
+                    sh "ls -ltr"
                     sh "terrafile -f env-${ENV}/Terrafile"
                     sh "terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars"
             }
