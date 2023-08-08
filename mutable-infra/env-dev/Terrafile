@@ -1,6 +1,5 @@
 app:
-    source:  "https://github.com/santhosh-patchigolla/tf-module-mutable-app.git"
-    version: "main" 
-
+    source:  "https://github.com/b54-clouddevops/tf-module-mutable-app.git"
+    version: "main"    
 
 // this is the terrafile added fo rhe backend cart component
